@@ -1,0 +1,27 @@
+<div>
+  <label>
+    Username:
+    <input type="text" [formControl]="username">
+  </label>
+  <label>
+    Email:
+    <input type="email" [formControl]="email">
+  </label>
+  <label>
+    Mot de passe:
+    <input type="password" [formControl]="password">
+  </label>
+  <label>
+    Adresse:
+    <input type="text" [formControl]="address">
+  </label>
+  <button (click)="createUser()">Inscription</button>
+</div>
+
+<div *ngIf="user">
+  <h2>Nouvel utilisateur créé :</h2>
+  <p>Username: {{ user.username }}</p>
+  <p>Email: {{ user.email }}</p>
+  <p>Adresse: {{ user.address }}</p>
+  <p>Mot de passe: {{ user.password }}</p>
+</div>
